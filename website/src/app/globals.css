@@ -1,37 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0b1220;
+  --background: #efeadd;
+  --foreground: #17160f;
 
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-500: #4f46e5;
-  --color-brand-600: #4338ca;
-  --color-brand-700: #3730a3;
+  --color-cream: #efeadd;
+  --color-cream-deep: #e6dfcb;
+  --color-ink: #17160f;
+  --color-ink-soft: #2a2920;
 
-  --color-accent-500: #0d9488;
-  --color-accent-600: #0f766e;
+  --color-teal-500: #3d8a9c;
+  --color-teal-600: #2e6e7d;
+  --color-teal-50: #e4eff1;
 
-  --color-ink: #0b1220;
-  --color-ink-soft: #111827;
+  --color-blue-500: #4a5fe0;
+  --color-blue-50: #e8eafc;
+
+  --color-coral-500: #d5574f;
+  --color-coral-50: #fbe9e7;
+
+  --color-violet-500: #7a5fd1;
+  --color-violet-50: #eee9fb;
+
+  --color-amber-500: #dd8a33;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
-  --color-brand-50: var(--color-brand-50);
-  --color-brand-100: var(--color-brand-100);
-  --color-brand-500: var(--color-brand-500);
-  --color-brand-600: var(--color-brand-600);
-  --color-brand-700: var(--color-brand-700);
-  --color-accent-500: var(--color-accent-500);
-  --color-accent-600: var(--color-accent-600);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-script: var(--font-script);
+
+  --color-cream: var(--color-cream);
+  --color-cream-deep: var(--color-cream-deep);
   --color-ink: var(--color-ink);
   --color-ink-soft: var(--color-ink-soft);
+
+  --color-teal-50: var(--color-teal-50);
+  --color-teal-500: var(--color-teal-500);
+  --color-teal-600: var(--color-teal-600);
+
+  --color-blue-50: var(--color-blue-50);
+  --color-blue-500: var(--color-blue-500);
+
+  --color-coral-50: var(--color-coral-50);
+  --color-coral-500: var(--color-coral-500);
+
+  --color-violet-50: var(--color-violet-50);
+  --color-violet-500: var(--color-violet-500);
+
+  --color-amber-500: var(--color-amber-500);
 }
 
 body {
@@ -40,16 +61,45 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-.bg-grid {
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-  background-size: 40px 40px;
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
 }
 
-.bg-grid-light {
+.font-mono-label {
+  font-family: var(--font-mono), monospace;
+  letter-spacing: 0.08em;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.verify-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(221, 138, 51, 0.5);
+  color: var(--color-amber-500);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.05rem 0.45rem;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.bg-grid-dark {
   background-image:
-    linear-gradient(to right, rgba(79, 70, 229, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(79, 70, 229, 0.07) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
 }

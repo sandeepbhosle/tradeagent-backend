@@ -1,26 +1,39 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fraunces, IBM_Plex_Mono, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fraunces = Fraunces({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
+const inter = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
+});
+
+const caveat = Caveat({
+  variable: "--font-script",
+  subsets: ["latin"],
+  weight: ["500", "600"],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "infoesearch | Content Moderation, Localization & Trust & Safety",
-    template: "%s | infoesearch",
+    default: "Infoesearch | Content Operations, Since 2007",
+    template: "%s | Infoesearch",
   },
   description:
-    "infoesearch is a global content localization, trust & safety, and media intelligence partner. Content moderation, localization & dubbing, closed captioning & subtitling, and trust & safety services since 2007.",
+    "Infoesearch runs content operations for broadcasters, streaming platforms, media intelligence firms and online communities — combining proprietary AI with expert human judgment, 24 hours a day, since 2007.",
 };
 
 export default function RootLayout({
@@ -31,9 +44,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable} ${caveat.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col bg-cream text-ink">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
